@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-type CorrespondenceProps = {
+type CorrespondenceProps = Readonly<{
   fileNumber?: string;
   project?: string;
   address?: string;
@@ -8,7 +8,7 @@ type CorrespondenceProps = {
   budget?: string;
   leadTime?: string;
   crew?: string;
-};
+}>;
 
 export default function Correspondence({
   fileNumber = "042",
@@ -55,7 +55,7 @@ export default function Correspondence({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-basalt/80 via-transparent to-transparent" />
             <figcaption className="absolute inset-x-4 bottom-3 font-mono text-[11px] uppercase tracking-[0.16em] text-sand">
-              <span className="mr-2 text-iron">FIG. 02</span>
+              <span className="mr-2 text-iron">FIG. 02</span>{" "}
               After, Foothills project — 14′×22′ pergola, engineered stone
               columns, mesquite-stained beam frame
             </figcaption>

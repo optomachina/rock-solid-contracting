@@ -1,9 +1,9 @@
-type Props = {
+type Props = Readonly<{
   marker?: string;
   children: React.ReactNode;
   tone?: "dark" | "paper";
   className?: string;
-};
+}>;
 
 export default function SectionLabel({
   marker = "§",

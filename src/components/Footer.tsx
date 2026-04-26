@@ -1,7 +1,10 @@
+type Item = { key: string; node: React.ReactNode };
 type Column = {
   heading: string;
-  items: React.ReactNode[];
+  items: Item[];
 };
+
+const text = (s: string): Item => ({ key: s, node: s });
 
 const columns: Column[] = [
   {
@@ -13,22 +16,32 @@ const columns: Column[] = [
       "Flooring",
       "Whole-Home",
       "General Contracting",
-    ],
+    ].map(text),
   },
   {
     heading: "Service Area",
-    items: ["Tucson", "Phoenix", "Marana, Oro Valley", "Vail, Sahuarita", "Casa Grande"],
+    items: ["Tucson", "Phoenix", "Marana, Oro Valley", "Vail, Sahuarita", "Casa Grande"].map(text),
   },
   {
     heading: "Contact",
     items: [
-      <a key="email" href="mailto:contact@azrocksolid.com" className="transition hover:text-iron">
-        contact@azrocksolid.com
-      </a>,
-      <a key="phone" href="tel:+15209108898" className="transition hover:text-iron">
-        (520) 910-8898
-      </a>,
-      <span key="lic" className="text-shadow">LIC #ROC-XXXXXX</span>,
+      {
+        key: "email",
+        node: (
+          <a href="mailto:contact@azrocksolid.com" className="transition hover:text-iron">
+            contact@azrocksolid.com
+          </a>
+        ),
+      },
+      {
+        key: "phone",
+        node: (
+          <a href="tel:+15209108898" className="transition hover:text-iron">
+            (520) 910-8898
+          </a>
+        ),
+      },
+      { key: "lic", node: <span className="text-shadow">LIC #ROC-XXXXXX</span> },
     ],
   },
 ];
@@ -58,8 +71,8 @@ export default function Footer() {
                 {col.heading}
               </h3>
               <ul className="mt-5 space-y-2 text-[19px] leading-[1.5]">
-                {col.items.map((item, i) => (
-                  <li key={i}>{item}</li>
+                {col.items.map((item) => (
+                  <li key={item.key}>{item.node}</li>
                 ))}
               </ul>
             </div>
