@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import SectionLabel from "./SectionLabel";
 
 const photos = [
   { src: "/gallery/gallery-01.png", alt: "Stamped concrete walkway and patio", caption: "Stamped concrete walkway" },
@@ -43,9 +44,7 @@ export default function Gallery() {
     <section id="work" className="border-t border-[var(--line)] bg-surface py-24">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         <div className="max-w-3xl">
-          <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-shadow">
-            <span className="text-iron">§</span> Our Work
-          </p>
+          <SectionLabel>Our Work</SectionLabel>
           <h2 className="fv-display mt-2 font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-sand">
             Recent projects across Tucson & Phoenix
           </h2>

@@ -1,13 +1,12 @@
 import EstimateForm from "./EstimateForm";
+import SectionLabel from "./SectionLabel";
 
 export default function EstimateSection() {
   return (
     <section id="estimate" className="border-t border-[var(--line)] bg-basalt py-24">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         <div>
-          <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-shadow">
-            <span className="text-iron">§05</span> &nbsp; Estimate
-          </p>
+          <SectionLabel marker="§05">Estimate</SectionLabel>
           <h2 className="fv-display mt-2 max-w-[18ch] font-display text-[clamp(56px,7.4vw,110px)] font-bold leading-[1.02] text-sand">
             Tell us what you&apos;re <em className="fv-italic italic text-iron">building.</em>
           </h2>

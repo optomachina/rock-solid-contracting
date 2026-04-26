@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionLabel from "./SectionLabel";
 
 const services = [
   {
@@ -55,9 +56,7 @@ export default function Services() {
   return (
     <section id="services" className="border-t border-[var(--line)] bg-basalt py-24">
       <div className="mx-auto grid max-w-[1440px] gap-8 px-4 md:grid-cols-[38fr_62fr] md:px-8">
-        <div className="font-mono text-[13px] uppercase tracking-[0.18em] text-shadow">
-          <span className="text-iron">§04</span> &nbsp; Capabilities
-        </div>
+        <SectionLabel marker="§04">Capabilities</SectionLabel>
         <div>
           <h2 className="fv-display font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-sand">
             What we build.

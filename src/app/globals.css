@@ -78,4 +78,7 @@ body {
   .fv-italic {
     font-variation-settings: "opsz" 144, "wght" 600, "SOFT" 50, "WONK" 1;
   }
+  .text-meta {
+    @apply font-mono text-[13px] uppercase;
+  }
 }

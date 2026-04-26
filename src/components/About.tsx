@@ -1,3 +1,5 @@
+import SectionLabel from "./SectionLabel";
+
 export default function About() {
   const stats = [
     ["License", "ROC-XXXXXX (insured)"],
@@ -11,9 +13,7 @@ export default function About() {
       <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         <div className="grid gap-12 lg:grid-cols-[38fr_62fr]">
           <div>
-            <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-[var(--on-paper-muted)]">
-              <span className="text-iron">§</span> About Rock Solid
-            </p>
+            <SectionLabel tone="paper">About Rock Solid</SectionLabel>
             <h2 className="fv-display mt-2 font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-[var(--on-paper-text)]">
               Local contractors who show up, follow through, and finish clean.
             </h2>
