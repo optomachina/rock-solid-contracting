@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import SectionLabel from "./SectionLabel";
 
 const photos = [
   { src: "/gallery/gallery-01.png", alt: "Stamped concrete walkway and patio", caption: "Stamped concrete walkway" },
@@ -40,13 +41,11 @@ export default function Gallery() {
   }, [active, close, prev, next]);
 
   return (
-    <section id="work" className="bg-stone-100 py-20">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[var(--brand-red)]">
-            Our Work
-          </p>
-          <h2 className="mt-2 text-3xl font-bold text-stone-900 md:text-4xl">
+    <section id="work" className="border-t border-[var(--line)] bg-surface py-24">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8">
+        <div className="max-w-3xl">
+          <SectionLabel>Our Work</SectionLabel>
+          <h2 className="fv-display mt-2 font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-sand">
             Recent projects across Tucson & Phoenix
           </h2>
         </div>
@@ -55,17 +54,19 @@ export default function Gallery() {
             <button
               key={p.src}
               onClick={() => setActive(i)}
-              className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-stone-300 focus:outline-none focus:ring-2 focus:ring-[var(--brand-red)]"
+              className="group relative aspect-[4/3] overflow-hidden bg-varnish focus:outline-none focus:ring-2 focus:ring-iron"
               aria-label={`View ${p.caption}`}
             >
               <Image
                 src={p.src}
                 alt={p.alt}
                 fill
+                loading={p.src === "/gallery/gallery-02.png" ? undefined : "eager"}
+                priority={p.src === "/gallery/gallery-02.png"}
                 sizes="(max-width: 768px) 50vw, 33vw"
-                className="object-cover transition group-hover:scale-105"
+                className="object-cover contrast-105 saturate-[0.9] sepia-[0.08] transition duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-left text-sm font-medium text-white opacity-0 transition group-hover:opacity-100">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-basalt/80 to-transparent p-3 text-left font-mono text-[11px] uppercase tracking-[0.14em] text-sand opacity-0 transition group-hover:opacity-100">
                 {p.caption}
               </div>
             </button>
@@ -81,14 +82,14 @@ export default function Gallery() {
           aria-modal="true"
         >
           <button
-            className="absolute right-4 top-4 rounded-full bg-white/10 px-3 py-1 text-white hover:bg-white/20"
+            className="absolute right-4 top-4 bg-white/10 px-3 py-1 font-mono text-white hover:bg-white/20"
             onClick={close}
             aria-label="Close"
           >
             ✕
           </button>
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 px-4 py-2 text-2xl text-white hover:bg-white/20"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 px-4 py-2 text-2xl text-white hover:bg-white/20"
             onClick={(e) => {
               e.stopPropagation();
               prev();
@@ -98,7 +99,7 @@ export default function Gallery() {
             ‹
           </button>
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 px-4 py-2 text-2xl text-white hover:bg-white/20"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 px-4 py-2 text-2xl text-white hover:bg-white/20"
             onClick={(e) => {
               e.stopPropagation();
               next();
@@ -116,11 +117,12 @@ export default function Gallery() {
                 src={photos[active].src}
                 alt={photos[active].alt}
                 fill
+                loading="eager"
                 className="object-contain"
                 sizes="90vw"
               />
             </div>
-            <p className="mt-3 text-center text-sm text-stone-300">
+            <p className="mt-3 text-center font-mono text-[13px] uppercase tracking-[0.12em] text-sand">
               {photos[active].caption}
             </p>
           </div>

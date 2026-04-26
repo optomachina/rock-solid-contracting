@@ -3,10 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --brand-red: #b8331e;
-  --brand-red-dark: #8f2414;
-  --brand-sand: #f5efe4;
-  --brand-ink: #1a1a1a;
+  --rs-basalt: #171411;
+  --rs-caliche: #e8ddc9;
+  --rs-iron: #a64a2a;
+  --rs-iron-hover: #c45a32;
+  --rs-varnish: #a8956b;
+  --rs-mesquite: #5c6b3a;
+  --rs-dust: #c8721e;
+  --rs-sand: #d9cdb6;
+  --rs-shadow: #5f5649;
+  --bg: var(--rs-basalt);
+  --surface: #1f1a16;
+  --paper: var(--rs-caliche);
+  --text: var(--rs-sand);
+  --text-muted: var(--rs-shadow);
+  --accent: var(--rs-iron);
+  --accent-hover: var(--rs-iron-hover);
+  --line: #3a3128;
+  --on-paper-text: #1f1c17;
+  --on-paper-muted: #5f5649;
+  --on-paper-line: var(--rs-varnish);
+}
+
+[data-theme="light"] {
+  --bg: var(--rs-caliche);
+  --surface: #f1e7d3;
+  --paper: var(--rs-basalt);
+  --text: #1f1c17;
+  --text-muted: #5f5649;
+  --line: var(--rs-varnish);
+  --on-paper-text: var(--rs-sand);
+  --on-paper-muted: var(--rs-shadow);
+  --on-paper-line: #3a3128;
 }
 
 html {
@@ -14,7 +42,12 @@ html {
 }
 
 body {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 19px;
+  font-feature-settings: "onum" 1, "kern" 1;
+  line-height: 1.6;
 }
 
 @layer utilities {
@@ -22,12 +55,30 @@ body {
     text-wrap: balance;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-md bg-[var(--brand-red)] px-5 py-3 font-semibold text-white shadow-sm transition hover:bg-[var(--brand-red-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-red)] focus:ring-offset-2;
+    @apply inline-flex items-center justify-center bg-iron px-5 py-3 font-mono text-[13px] font-medium uppercase tracking-[0.14em] text-white transition hover:bg-iron-hover focus:outline-none focus:ring-2 focus:ring-iron focus:ring-offset-2 focus:ring-offset-basalt;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md border border-stone-300 bg-white px-5 py-3 font-semibold text-stone-800 transition hover:bg-stone-100;
+    @apply inline-flex items-center justify-center border border-[var(--line)] bg-transparent px-5 py-3 font-mono text-[13px] font-medium uppercase tracking-[0.14em] text-[var(--text)] transition hover:border-iron hover:text-iron focus:outline-none focus:ring-2 focus:ring-iron focus:ring-offset-2 focus:ring-offset-basalt;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-3 bg-transparent px-0 py-3 font-mono text-[13px] font-medium uppercase tracking-[0.14em] text-[var(--text)] transition hover:text-iron focus:outline-none focus:ring-2 focus:ring-iron focus:ring-offset-2 focus:ring-offset-basalt;
   }
   .input {
-    @apply block w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-[var(--brand-red)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-red)];
+    @apply block w-full border-0 border-b border-[var(--line)] bg-transparent px-0 py-3 font-serif text-[19px] text-[var(--text)] shadow-none outline-none placeholder:text-[var(--text-muted)] focus:border-iron focus:outline-none focus:ring-0;
+  }
+  .fv-display {
+    font-variation-settings: "opsz" 144, "wght" 700, "SOFT" 30;
+  }
+  .fv-display-sm {
+    font-variation-settings: "opsz" 96, "wght" 700, "SOFT" 30;
+  }
+  .fv-display-wordmark {
+    font-variation-settings: "opsz" 60, "wght" 700, "SOFT" 30;
+  }
+  .fv-italic {
+    font-variation-settings: "opsz" 144, "wght" 600, "SOFT" 50, "WONK" 1;
+  }
+  .text-meta {
+    @apply font-mono text-[13px] uppercase;
   }
 }
