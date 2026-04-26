@@ -23,7 +23,7 @@ export default function Header() {
               Contractors
             </span>
         </Link>
-          <nav className="hidden items-center gap-7 font-mono text-[13px] uppercase tracking-[0.1em] text-sand md:flex">
+          <nav className="hidden items-center gap-7 text-meta tracking-[0.1em] text-sand md:flex">
             <a href="#services" className="transition hover:text-iron">Services</a>
             <a href="#work" className="transition hover:text-iron">Our Work</a>
             <a href="#about" className="transition hover:text-iron">About</a>

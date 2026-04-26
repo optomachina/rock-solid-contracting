@@ -1,3 +1,38 @@
+type Column = {
+  heading: string;
+  items: React.ReactNode[];
+};
+
+const columns: Column[] = [
+  {
+    heading: "Services",
+    items: [
+      "Outdoor Living",
+      "Kitchens",
+      "Bathrooms",
+      "Flooring",
+      "Whole-Home",
+      "General Contracting",
+    ],
+  },
+  {
+    heading: "Service Area",
+    items: ["Tucson", "Phoenix", "Marana, Oro Valley", "Vail, Sahuarita", "Casa Grande"],
+  },
+  {
+    heading: "Contact",
+    items: [
+      <a key="email" href="mailto:contact@azrocksolid.com" className="transition hover:text-iron">
+        contact@azrocksolid.com
+      </a>,
+      <a key="phone" href="tel:+15209108898" className="transition hover:text-iron">
+        (520) 910-8898
+      </a>,
+      <span key="lic" className="text-shadow">LIC #ROC-XXXXXX</span>,
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-[var(--line)] bg-basalt text-sand">
@@ -17,51 +52,20 @@ export default function Footer() {
               Arizona since 2008.
             </p>
           </div>
-          <div>
-            <h3 className="font-mono text-[13px] font-semibold uppercase tracking-[0.14em] text-shadow">
-              Services
-            </h3>
-            <ul className="mt-5 space-y-2 text-[19px] leading-[1.5]">
-              <li>Outdoor Living</li>
-              <li>Kitchens</li>
-              <li>Bathrooms</li>
-              <li>Flooring</li>
-              <li>Whole-Home</li>
-              <li>General Contracting</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-mono text-[13px] font-semibold uppercase tracking-[0.14em] text-shadow">
-              Service Area
-            </h3>
-            <ul className="mt-5 space-y-2 text-[19px] leading-[1.5]">
-              <li>Tucson</li>
-              <li>Phoenix</li>
-              <li>Marana, Oro Valley</li>
-              <li>Vail, Sahuarita</li>
-              <li>Casa Grande</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-mono text-[13px] font-semibold uppercase tracking-[0.14em] text-shadow">
-              Contact
-            </h3>
-            <ul className="mt-5 space-y-2 text-[19px] leading-[1.5]">
-              <li>
-                <a href="mailto:contact@azrocksolid.com" className="transition hover:text-iron">
-                  contact@azrocksolid.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+15209108898" className="transition hover:text-iron">
-                  (520) 910-8898
-                </a>
-              </li>
-              <li className="text-shadow">LIC #ROC-XXXXXX</li>
-            </ul>
-          </div>
+          {columns.map((col) => (
+            <div key={col.heading}>
+              <h3 className="text-meta font-semibold tracking-[0.14em] text-shadow">
+                {col.heading}
+              </h3>
+              <ul className="mt-5 space-y-2 text-[19px] leading-[1.5]">
+                {col.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-        <div className="mt-12 flex flex-wrap justify-between gap-4 border-t border-[var(--line)] pt-8 font-mono text-[13px] uppercase tracking-[0.14em] text-shadow">
+        <div className="text-meta mt-12 flex flex-wrap justify-between gap-4 border-t border-[var(--line)] pt-8 tracking-[0.14em] text-shadow">
           <span>© {new Date().getFullYear()} Rock Solid Contractors · All rights reserved</span>
           <span>Set in Fraunces · Newsreader · JetBrains Mono</span>
         </div>

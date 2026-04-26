@@ -80,7 +80,7 @@ export default function Correspondence({
           <div className="fv-italic mt-11 font-display text-[32px] italic">
             — Patricia &amp; Daniel Reyes
           </div>
-          <div className="mt-2 font-mono text-[13px] uppercase tracking-[0.1em] text-[var(--on-paper-muted)]">
+          <div className="mt-2 text-meta tracking-[0.1em] text-[var(--on-paper-muted)]">
             Client · Tucson Foothills · 2025
           </div>
         </div>

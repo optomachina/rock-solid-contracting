@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         <div className="grid gap-8 border-t border-[var(--line)] py-16 md:grid-cols-[38fr_62fr] md:gap-12 md:py-24">
           <div className="flex flex-col">
-            <div className="mb-9 flex flex-wrap gap-x-7 gap-y-3 border-b border-[var(--line)] pb-5 font-mono text-[13px] uppercase tracking-[0.1em] text-shadow">
+            <div className="mb-9 flex flex-wrap gap-x-7 gap-y-3 border-b border-[var(--line)] pb-5 text-meta tracking-[0.1em] text-shadow">
               <span className="text-iron">Project №247</span>
               <span>Foothills · Tucson</span>
               <span>Stone + Timber</span>

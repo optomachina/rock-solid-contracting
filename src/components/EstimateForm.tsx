@@ -180,7 +180,7 @@ export default function EstimateForm() {
           onChange={onFileChange}
           className="block w-full font-serif text-[19px] text-sand file:mr-4 file:border-0 file:bg-iron file:px-4 file:py-2 file:font-mono file:text-[13px] file:font-medium file:uppercase file:tracking-[0.14em] file:text-white hover:file:bg-iron-hover"
         />
-        <p className="mt-2 font-mono text-[13px] uppercase tracking-[0.1em] text-shadow">
+        <p className="mt-2 text-meta tracking-[0.1em] text-shadow">
           Up to {MAX_FILES} files, {MAX_FILE_MB} MB each. Helpful but optional.
         </p>
         {files.length > 0 && (
@@ -195,7 +195,7 @@ export default function EstimateForm() {
       </Field>
 
       {errorMsg && (
-        <p className="border border-iron bg-iron/10 p-3 font-mono text-[13px] uppercase tracking-[0.1em] text-iron">
+        <p className="border border-iron bg-iron/10 p-3 text-meta tracking-[0.1em] text-iron">
           {errorMsg}
         </p>
       )}
@@ -207,7 +207,7 @@ export default function EstimateForm() {
       >
         {status === "submitting" ? "Sending…" : "Request Estimate →"}
       </button>
-      <p className="font-mono text-[13px] uppercase tracking-[0.1em] text-shadow">
+      <p className="text-meta tracking-[0.1em] text-shadow">
         We&apos;ll respond within one business day. No spam — ever.
       </p>
     </form>
@@ -227,7 +227,7 @@ function Field({
 }) {
   return (
     <label htmlFor={htmlFor} className="block">
-      <span className="mb-1 block font-mono text-[13px] uppercase tracking-[0.14em] text-shadow">
+      <span className="mb-1 block text-meta tracking-[0.14em] text-shadow">
         {label}
         {required && <span className="ml-0.5 text-iron">*</span>}
       </span>
