@@ -46,7 +46,7 @@ export default function Gallery() {
           <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-shadow">
             <span className="text-iron">§</span> Our Work
           </p>
-          <h2 className="mt-2 font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-sand [font-variation-settings:'opsz'_144,'wght'_700,'SOFT'_30]">
+          <h2 className="fv-display mt-2 font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-sand">
             Recent projects across Tucson & Phoenix
           </h2>
         </div>

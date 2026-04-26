@@ -8,8 +8,8 @@ export default function EstimateSection() {
           <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-shadow">
             <span className="text-iron">§05</span> &nbsp; Estimate
           </p>
-          <h2 className="mt-2 max-w-[18ch] font-display text-[clamp(56px,7.4vw,110px)] font-bold leading-[1.02] text-sand [font-variation-settings:'opsz'_144,'wght'_700,'SOFT'_30]">
-            Tell us what you&apos;re <em className="italic text-iron [font-variation-settings:'opsz'_144,'wght'_600,'SOFT'_50,'WONK'_1]">building.</em>
+          <h2 className="fv-display mt-2 max-w-[18ch] font-display text-[clamp(56px,7.4vw,110px)] font-bold leading-[1.02] text-sand">
+            Tell us what you&apos;re <em className="fv-italic italic text-iron">building.</em>
           </h2>
           <p className="mt-6 max-w-[56ch] text-[19px] leading-[1.6] text-sand">
             Tell us about the project, pick a time that works, and upload

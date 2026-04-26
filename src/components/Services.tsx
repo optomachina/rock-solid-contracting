@@ -59,7 +59,7 @@ export default function Services() {
           <span className="text-iron">§04</span> &nbsp; Capabilities
         </div>
         <div>
-          <h2 className="font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-sand [font-variation-settings:'opsz'_144,'wght'_700,'SOFT'_30]">
+          <h2 className="fv-display font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-sand">
             What we build.
           </h2>
           <p className="mt-5 max-w-[56ch] text-[20px] leading-[1.6] text-sand">
@@ -76,7 +76,7 @@ export default function Services() {
               <span className="font-mono text-[13px] tracking-[0.08em] text-iron">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display text-[clamp(32px,4vw,52px)] font-bold leading-[1.02] text-sand [font-variation-settings:'opsz'_144,'wght'_700,'SOFT'_30]">
+              <h3 className="fv-display font-display text-[clamp(32px,4vw,52px)] font-bold leading-[1.02] text-sand">
                 {s.title}
               </h3>
               <p className="hidden max-w-[36ch] text-[19px] italic leading-[1.55] text-shadow md:block">

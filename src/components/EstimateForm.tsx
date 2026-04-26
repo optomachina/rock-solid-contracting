@@ -68,7 +68,7 @@ export default function EstimateForm() {
   if (status === "success") {
     return (
       <div className="border border-mesquite bg-mesquite/10 p-8">
-        <h3 className="font-display text-[34px] font-bold text-sand [font-variation-settings:'opsz'_96,'wght'_700,'SOFT'_30]">Thanks — we got it.</h3>
+        <h3 className="fv-display-sm font-display text-[34px] font-bold text-sand">Thanks — we got it.</h3>
         <p className="mt-3 text-sand">
           We&apos;ll reach out within one business day to confirm your estimate
           appointment. Keep an eye on your email.

@@ -16,7 +16,7 @@ export default function Header() {
         </div>
         <div className="flex items-center justify-between py-5">
           <Link href="#top" className="flex flex-col leading-none text-sand">
-            <span className="font-display text-[30px] font-bold uppercase tracking-normal [font-variation-settings:'opsz'_60,'wght'_700,'SOFT'_30]">
+            <span className="fv-display-wordmark font-display text-[30px] font-bold uppercase tracking-normal">
               Rock Solid
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-shadow">

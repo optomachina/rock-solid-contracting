@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex flex-col leading-none">
-              <span className="font-display text-[30px] font-bold uppercase tracking-normal text-sand [font-variation-settings:'opsz'_60,'wght'_700,'SOFT'_30]">
+              <span className="fv-display-wordmark font-display text-[30px] font-bold uppercase tracking-normal text-sand">
                 Rock Solid
               </span>
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-shadow">

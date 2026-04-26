@@ -14,7 +14,7 @@ export default function About() {
             <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-[var(--on-paper-muted)]">
               <span className="text-iron">§</span> About Rock Solid
             </p>
-            <h2 className="mt-2 font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-[var(--on-paper-text)] [font-variation-settings:'opsz'_144,'wght'_700,'SOFT'_30]">
+            <h2 className="fv-display mt-2 font-display text-[clamp(40px,5.2vw,76px)] font-bold leading-[1.02] text-[var(--on-paper-text)]">
               Local contractors who show up, follow through, and finish clean.
             </h2>
           </div>

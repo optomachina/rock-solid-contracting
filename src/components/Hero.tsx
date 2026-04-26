@@ -11,10 +11,10 @@ export default function Hero() {
               <span>Foothills · Tucson</span>
               <span>Stone + Timber</span>
             </div>
-            <h1 className="text-balance font-display text-[clamp(56px,7.4vw,108px)] font-bold leading-none tracking-normal text-sand [font-variation-settings:'opsz'_144,'wght'_700,'SOFT'_30,'WONK'_0]">
-              Remodels built to last. <em className="font-display italic text-iron [font-variation-settings:'opsz'_144,'wght'_600,'SOFT'_50,'WONK'_1]">Outdoor living</em> done right.
+            <h1 className="fv-display text-balance font-display text-[clamp(56px,7.4vw,108px)] font-bold leading-none tracking-normal text-sand">
+              Remodels built to last. <em className="fv-italic font-display italic text-iron">Outdoor living</em> done right.
             </h1>
-            <p className="-mt-2 mb-7 mt-7 max-w-[36ch] font-display text-[21px] italic leading-snug text-shadow [font-variation-settings:'opsz'_144,'wght'_600,'SOFT'_50,'WONK'_1]">
+            <p className="fv-italic -mt-2 mb-7 mt-7 max-w-[36ch] font-display text-[21px] italic leading-snug text-shadow">
               Stone, timber, time.
             </p>
             <p className="max-w-[34ch] text-[22px] leading-[1.55] text-sand">

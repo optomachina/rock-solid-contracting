@@ -66,4 +66,16 @@ body {
   .input {
     @apply block w-full border-0 border-b border-[var(--line)] bg-transparent px-0 py-3 font-serif text-[19px] text-[var(--text)] shadow-none outline-none placeholder:text-[var(--text-muted)] focus:border-iron focus:outline-none focus:ring-0;
   }
+  .fv-display {
+    font-variation-settings: "opsz" 144, "wght" 700, "SOFT" 30;
+  }
+  .fv-display-sm {
+    font-variation-settings: "opsz" 96, "wght" 700, "SOFT" 30;
+  }
+  .fv-display-wordmark {
+    font-variation-settings: "opsz" 60, "wght" 700, "SOFT" 30;
+  }
+  .fv-italic {
+    font-variation-settings: "opsz" 144, "wght" 600, "SOFT" 50, "WONK" 1;
+  }
 }
