@@ -67,9 +67,9 @@ export default function EstimateForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-8 text-center">
-        <h3 className="text-2xl font-bold text-emerald-900">Thanks — we got it.</h3>
-        <p className="mt-3 text-emerald-800">
+      <div className="border border-mesquite bg-mesquite/10 p-8">
+        <h3 className="font-display text-[34px] font-bold text-sand [font-variation-settings:'opsz'_96,'wght'_700,'SOFT'_30]">Thanks — we got it.</h3>
+        <p className="mt-3 text-sand">
           We&apos;ll reach out within one business day to confirm your estimate
           appointment. Keep an eye on your email.
         </p>
@@ -84,7 +84,7 @@ export default function EstimateForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-5" encType="multipart/form-data">
+    <form onSubmit={onSubmit} className="space-y-6" encType="multipart/form-data">
       <div className="grid gap-5 md:grid-cols-2">
         <Field label="Full name" htmlFor="name" required>
           <input
@@ -178,16 +178,16 @@ export default function EstimateForm() {
           multiple
           accept="image/*,video/*"
           onChange={onFileChange}
-          className="block w-full text-sm text-stone-600 file:mr-4 file:rounded-md file:border-0 file:bg-[var(--brand-red)] file:px-4 file:py-2 file:font-semibold file:text-white hover:file:bg-[var(--brand-red-dark)]"
+          className="block w-full font-serif text-[19px] text-sand file:mr-4 file:border-0 file:bg-iron file:px-4 file:py-2 file:font-mono file:text-[13px] file:font-medium file:uppercase file:tracking-[0.14em] file:text-white hover:file:bg-iron-hover"
         />
-        <p className="mt-1 text-xs text-stone-500">
+        <p className="mt-2 font-mono text-[13px] uppercase tracking-[0.1em] text-shadow">
           Up to {MAX_FILES} files, {MAX_FILE_MB} MB each. Helpful but optional.
         </p>
         {files.length > 0 && (
-          <ul className="mt-2 text-xs text-stone-600">
+          <ul className="mt-2 font-mono text-[13px] text-sand">
             {files.map((f) => (
               <li key={f.name}>
-                • {f.name} ({(f.size / 1024 / 1024).toFixed(1)} MB)
+                {f.name} ({(f.size / 1024 / 1024).toFixed(1)} MB)
               </li>
             ))}
           </ul>
@@ -195,7 +195,7 @@ export default function EstimateForm() {
       </Field>
 
       {errorMsg && (
-        <p className="rounded-md bg-red-50 p-3 text-sm text-red-700">
+        <p className="border border-iron bg-iron/10 p-3 font-mono text-[13px] uppercase tracking-[0.1em] text-iron">
           {errorMsg}
         </p>
       )}
@@ -205,9 +205,9 @@ export default function EstimateForm() {
         disabled={status === "submitting"}
         className="btn-primary w-full md:w-auto disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "submitting" ? "Sending…" : "Request Estimate"}
+        {status === "submitting" ? "Sending…" : "Request Estimate →"}
       </button>
-      <p className="text-xs text-stone-500">
+      <p className="font-mono text-[13px] uppercase tracking-[0.1em] text-shadow">
         We&apos;ll respond within one business day. No spam — ever.
       </p>
     </form>
@@ -227,9 +227,9 @@ function Field({
 }) {
   return (
     <label htmlFor={htmlFor} className="block">
-      <span className="mb-1 block text-sm font-medium text-stone-800">
+      <span className="mb-1 block font-mono text-[13px] uppercase tracking-[0.14em] text-shadow">
         {label}
-        {required && <span className="ml-0.5 text-[var(--brand-red)]">*</span>}
+        {required && <span className="ml-0.5 text-iron">*</span>}
       </span>
       {children}
     </label>

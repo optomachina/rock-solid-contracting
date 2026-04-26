@@ -38,3 +38,4 @@ next-env.d.ts
 # raw source images (originals; keep local only — renamed copies live in public/gallery)
 /Images
 
+.gstack/

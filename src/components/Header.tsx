@@ -1,37 +1,40 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-stone-200 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="#top" className="flex items-center gap-3">
-          <Image
-            src="/logo.png"
-            alt="Rock Solid Contractors logo"
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded-full object-cover"
-            priority
-          />
-          <div className="leading-tight">
-            <div className="font-bold text-stone-900">Rock Solid</div>
-            <div className="text-xs uppercase tracking-wider text-stone-500">
-              Contractors
-            </div>
+    <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-basalt/95 backdrop-blur">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--line)] py-3 font-mono text-[11px] uppercase tracking-[0.14em] text-shadow md:text-[13px]">
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <span>
+              <span className="text-iron">●</span> TUC + PHX
+            </span>
+            <span>LIC #ROC-XXXXXX</span>
+            <span>EST. 2008</span>
           </div>
+          <div>Stone, timber, time</div>
+        </div>
+        <div className="flex items-center justify-between py-5">
+          <Link href="#top" className="flex flex-col leading-none text-sand">
+            <span className="font-display text-[30px] font-bold uppercase tracking-normal [font-variation-settings:'opsz'_60,'wght'_700,'SOFT'_30]">
+              Rock Solid
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-shadow">
+              Contractors
+            </span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-stone-700 md:flex">
-          <a href="#services" className="hover:text-[var(--brand-red)]">Services</a>
-          <a href="#work" className="hover:text-[var(--brand-red)]">Our Work</a>
-          <a href="#about" className="hover:text-[var(--brand-red)]">About</a>
-          <a href="#estimate" className="btn-primary !px-4 !py-2 text-sm">
-            Free Estimate
+          <nav className="hidden items-center gap-7 font-mono text-[13px] uppercase tracking-[0.1em] text-sand md:flex">
+            <a href="#services" className="transition hover:text-iron">Services</a>
+            <a href="#work" className="transition hover:text-iron">Our Work</a>
+            <a href="#about" className="transition hover:text-iron">About</a>
+            <a href="#estimate" className="btn-primary !px-4 !py-2">
+              Free Estimate →
+            </a>
+          </nav>
+          <a href="#estimate" className="btn-primary !px-3 !py-2 md:hidden">
+            Estimate →
           </a>
-        </nav>
-        <a href="#estimate" className="btn-primary !px-3 !py-2 text-sm md:hidden">
-          Estimate
-        </a>
+        </div>
       </div>
     </header>
   );
