@@ -210,6 +210,26 @@ export default function EstimateForm() {
       <p className="text-meta tracking-[0.1em] text-shadow">
         We&apos;ll respond within one business day. No spam — ever.
       </p>
+      <p className="max-w-[64ch] font-serif text-[15px] leading-[1.55] text-shadow">
+        By submitting, you agree to be contacted by Rock Solid Contractors
+        about your project at the phone number and email you provide,
+        including by text message. Message frequency varies; message and
+        data rates may apply. Reply STOP to opt out of texts. See our{" "}
+        <a
+          href="/privacy"
+          className="underline decoration-iron underline-offset-4 transition hover:text-iron"
+        >
+          Privacy Policy
+        </a>{" "}
+        and{" "}
+        <a
+          href="/terms"
+          className="underline decoration-iron underline-offset-4 transition hover:text-iron"
+        >
+          Terms of Service
+        </a>
+        .
+      </p>
     </form>
   );
 }

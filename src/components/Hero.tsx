@@ -22,7 +22,7 @@ export default function Hero() {
             and stonework that make an Arizona backyard actually livable.
           </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4">
-              <a href="#estimate" className="btn-primary px-7 py-4 text-[15px]">
+              <a href="/estimate" className="btn-primary px-7 py-4 text-[15px]">
                 Request a Free Estimate →
               </a>
               <a href="#work" className="btn-ghost">
