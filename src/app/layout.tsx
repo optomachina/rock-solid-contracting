@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, JetBrains_Mono, Newsreader } from "next/font/google";
-import Script from "next/script";
+import ChatWidget from "@/components/ChatWidget";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -52,13 +52,7 @@ export default function RootLayout({
         className={`${fraunces.variable} ${newsreader.variable} ${jetBrainsMono.variable} bg-basalt text-sand antialiased`}
       >
         {children}
-        <Script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69fc2f11ba1fce2b1b1b52c9"
-          data-source="WEB_USER"
-          strategy="afterInteractive"
-        />
+        <ChatWidget />
       </body>
     </html>
   );

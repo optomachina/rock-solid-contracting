@@ -48,6 +48,12 @@ Grab the **next unchecked task at the top of the active section**. Each task is 
 
 ## Now
 
+### 0. Replace ROC license placeholder before A2P submission
+- Files: `src/components/Header.tsx` (line ~12), `src/components/Footer.tsx` (Contact column), `src/components/About.tsx` (stats row).
+- Currently shows `LIC #ROC-XXXXXX` / `ROC-XXXXXX`. Swap in the real Arizona ROC number.
+- Why: GoHighLevel A2P 10DLC compliance review reads the public site to verify the brand. Placeholder license number on a contractor site is a red flag for carriers.
+- Blocks: A2P 10DLC submission.
+
 ### 1. Add Vercel Analytics
 - File: `src/app/layout.tsx`
 - Install `@vercel/analytics`, add `<Analytics />` to root layout, commit.

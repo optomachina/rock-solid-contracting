@@ -41,7 +41,38 @@ const columns: Column[] = [
           </a>
         ),
       },
+      {
+        key: "address",
+        node: (
+          <span className="block text-sand">
+            3808 E 32nd St
+            <br />
+            Tucson, AZ 85713
+          </span>
+        ),
+      },
       { key: "lic", node: <span className="text-shadow">LIC #ROC-XXXXXX</span> },
+    ],
+  },
+  {
+    heading: "Legal",
+    items: [
+      {
+        key: "privacy",
+        node: (
+          <a href="/privacy" className="transition hover:text-iron">
+            Privacy Policy
+          </a>
+        ),
+      },
+      {
+        key: "terms",
+        node: (
+          <a href="/terms" className="transition hover:text-iron">
+            Terms of Service
+          </a>
+        ),
+      },
     ],
   },
 ];
@@ -50,7 +81,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-[var(--line)] bg-basalt text-sand">
       <div className="mx-auto max-w-[1440px] px-4 py-16 md:px-8 md:py-20">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div>
             <div className="flex flex-col leading-none">
               <span className="fv-display-wordmark font-display text-[30px] font-bold uppercase tracking-normal text-sand">

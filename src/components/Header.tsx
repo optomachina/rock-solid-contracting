@@ -27,11 +27,11 @@ export default function Header() {
             <a href="#services" className="transition hover:text-iron">Services</a>
             <a href="#work" className="transition hover:text-iron">Our Work</a>
             <a href="#about" className="transition hover:text-iron">About</a>
-            <a href="#estimate" className="btn-primary !px-4 !py-2">
+            <a href="/estimate" className="btn-primary !px-4 !py-2">
               Free Estimate →
             </a>
           </nav>
-          <a href="#estimate" className="btn-primary !px-3 !py-2 md:hidden">
+          <a href="/estimate" className="btn-primary !px-3 !py-2 md:hidden">
             Estimate →
           </a>
         </div>
