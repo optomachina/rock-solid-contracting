@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { LegalLayout, LegalLink, LegalList, LegalSection } from "@/components/LegalLayout";
+import {
+  LegalList,
+  LegalPage,
+  LegalParagraph,
+  LegalSection,
+  legalLinkClassName,
+} from "@/components/LegalContent";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Rock Solid Contractors",
@@ -11,28 +17,26 @@ const EFFECTIVE_DATE = "May 7, 2026";
 
 export default function PrivacyPage() {
   return (
-    <LegalLayout
+    <LegalPage
       eyebrow="Privacy Policy"
+      title="Privacy Policy"
       effectiveDate={EFFECTIVE_DATE}
-      title={
-        <>
-          Privacy <em className="fv-italic italic text-iron">Policy.</em>
-        </>
-      }
     >
       <LegalSection title="Who we are">
-        <p>
+        <LegalParagraph>
           Rock Solid Contractors (&ldquo;Rock Solid,&rdquo; &ldquo;we,&rdquo;
           &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is a licensed general
           contractor based at 3808 E 32nd St, Tucson, AZ 85713. This policy
           explains how we handle information collected through our website at
           azrocksolid.com, our estimate form, our chat widget, phone calls,
           and text messages.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Information we collect">
-        <p>We collect information you give us directly when you:</p>
+        <LegalParagraph>
+          We collect information you give us directly when you:
+        </LegalParagraph>
         <LegalList>
           <li>
             Submit the estimate request form: full name, phone number, email
@@ -46,16 +50,16 @@ export default function PrivacyPage() {
           </li>
           <li>
             Call or text our published phone number, or email us directly:
-            caller ID, message contents, and any details you share about
-            your project.
+            caller ID, message contents, and any details you share about your
+            project.
           </li>
         </LegalList>
-        <p>
+        <LegalParagraph>
           We may also receive limited automatic information from standard
           server logs and analytics tools (browser type, pages visited,
           approximate location based on IP). We do not use this information
           to build advertising profiles.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="How we use your information">
@@ -69,12 +73,12 @@ export default function PrivacyPage() {
       </LegalSection>
 
       <LegalSection title="SMS / text message terms">
-        <p>
+        <LegalParagraph>
           By providing your phone number through our website, our chat
           widget, or by texting us directly, you consent to receive text
           messages from Rock Solid Contractors related to your project,
           estimate, scheduling, and service follow-ups.
-        </p>
+        </LegalParagraph>
         <LegalList>
           <li>
             <strong>Message frequency:</strong> message frequency varies
@@ -94,28 +98,30 @@ export default function PrivacyPage() {
           <li>
             <strong>Help:</strong> reply <strong>HELP</strong> to any text
             message for assistance, or contact us at{" "}
-            <LegalLink href="mailto:contact@azrocksolid.com">
+            <a href="mailto:contact@azrocksolid.com" className={legalLinkClassName}>
               contact@azrocksolid.com
-            </LegalLink>
-            .
+            </a>
+            {"."}
           </li>
           <li>
             <strong>Carriers:</strong> mobile carriers are not liable for
             delayed or undelivered messages.
           </li>
         </LegalList>
-        <p>
+        <LegalParagraph>
           <strong>
             We do not share phone numbers or SMS opt-in consent data with
             third parties or affiliates for marketing purposes.
           </strong>{" "}
           Your phone number and your consent to receive messages from us are
           used only to communicate with you about your project.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="How we share information">
-        <p>We do not sell your personal information. We share information only with:</p>
+        <LegalParagraph>
+          We do not sell your personal information. We share information only with:
+        </LegalParagraph>
         <LegalList>
           <li>
             Service providers we use to operate the business — for example,
@@ -132,30 +138,30 @@ export default function PrivacyPage() {
             process.
           </li>
         </LegalList>
-        <p>
+        <LegalParagraph>
           We do not buy or sell leads, and we do not engage in affiliate
           marketing arrangements that share your information with unrelated
           companies.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Cookies and analytics">
-        <p>
+        <LegalParagraph>
           Our site and our chat widget use a small number of cookies and
           similar technologies necessary for the chat to function and for
           basic analytics. You can disable cookies in your browser; some
           site features may not work without them.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Data retention">
-        <p>
+        <LegalParagraph>
           We retain estimate requests, project communications, and customer
           records as long as needed to operate the business and meet legal,
           tax, and accounting requirements. You can ask us to delete your
           information at any time using the contact details below; we will
           honor the request to the extent the law allows.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Your choices">
@@ -174,36 +180,40 @@ export default function PrivacyPage() {
       </LegalSection>
 
       <LegalSection title="Children">
-        <p>
+        <LegalParagraph>
           Our services are not directed to children under 13. We do not
           knowingly collect personal information from children.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Changes to this policy">
-        <p>
+        <LegalParagraph>
           We may update this policy from time to time. The effective date at
           the top of this page reflects the most recent update. Material
           changes will be highlighted on the site.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Contact">
-        <p>Questions, requests, or privacy concerns? Reach us at:</p>
-        <p>
+        <LegalParagraph>
+          Questions, requests, or privacy concerns? Reach us at:
+        </LegalParagraph>
+        <LegalParagraph>
           Rock Solid Contractors
           <br />
           3808 E 32nd St
           <br />
           Tucson, AZ 85713
           <br />
-          <LegalLink href="mailto:contact@azrocksolid.com">
+          <a href="mailto:contact@azrocksolid.com" className={legalLinkClassName}>
             contact@azrocksolid.com
-          </LegalLink>
+          </a>
           <br />
-          <LegalLink href="tel:+15209108898">(520) 910-8898</LegalLink>
-        </p>
+          <a href="tel:+15209108898" className={legalLinkClassName}>
+            (520) 910-8898
+          </a>
+        </LegalParagraph>
       </LegalSection>
-    </LegalLayout>
+    </LegalPage>
   );
 }

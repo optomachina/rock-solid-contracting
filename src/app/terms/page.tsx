@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { LegalLayout, LegalLink, LegalList, LegalSection } from "@/components/LegalLayout";
+import Link from "next/link";
+import {
+  LegalList,
+  LegalPage,
+  LegalParagraph,
+  LegalSection,
+  legalLinkClassName,
+} from "@/components/LegalContent";
 
 export const metadata: Metadata = {
   title: "Terms of Service — Rock Solid Contractors",
@@ -11,75 +18,69 @@ const EFFECTIVE_DATE = "May 7, 2026";
 
 export default function TermsPage() {
   return (
-    <LegalLayout
+    <LegalPage
       eyebrow="Terms of Service"
+      title="Terms of Service"
       effectiveDate={EFFECTIVE_DATE}
-      title={
-        <>
-          Terms of <em className="fv-italic italic text-iron">Service.</em>
-        </>
-      }
     >
       <LegalSection title="Agreement">
-        <p>
+        <LegalParagraph>
           These Terms of Service (&ldquo;Terms&rdquo;) govern your use of
           azrocksolid.com (the &ldquo;Site&rdquo;), the estimate request
           form, the on-site chat widget, and any text messages, emails, or
-          calls between you and Rock Solid Contractors (&ldquo;Rock Solid,&rdquo;
-          &ldquo;we,&rdquo; or &ldquo;us&rdquo;). By using the Site or
-          contacting us through any of these channels, you agree to these
-          Terms.
-        </p>
+          calls between you and Rock Solid Contractors (&ldquo;Rock
+          Solid,&rdquo; &ldquo;we,&rdquo; or &ldquo;us&rdquo;). By using the
+          Site or contacting us through any of these channels, you agree to
+          these Terms.
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Our services">
-        <p>
+        <LegalParagraph>
           Rock Solid is a licensed Arizona general contractor. We provide
           remodeling and outdoor living services across southern Arizona,
           including Tucson, Phoenix, and the surrounding communities.
           Services include kitchens, bathrooms, flooring, whole-home
           renovations, pergolas, outdoor kitchens, stonework, and related
           general contracting.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Estimates are not contracts">
-        <p>
+        <LegalParagraph>
           Submitting the estimate form, chatting with us, or speaking with
           us by phone does not create a binding contract for construction
           work. Pricing, scope, materials, and timeline are finalized only
           in a separate written project agreement signed by both parties.
           Estimates given before a site visit are preliminary and may
-          change based on inspection, permitting, and material
-          availability.
-        </p>
+          change based on inspection, permitting, and material availability.
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Use of the site">
-        <p>
+        <LegalParagraph>
           You agree to use the Site only for lawful purposes and not to
-          attempt to interfere with its operation, copy or redistribute
-          its content without permission, or submit false or misleading
+          attempt to interfere with its operation, copy or redistribute its
+          content without permission, or submit false or misleading
           information through forms or chat.
-        </p>
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="SMS / text message terms">
-        <p>
+        <LegalParagraph>
           When you provide a phone number through our website, our chat
-          widget, or by texting our published number, you consent to
-          receive text messages from Rock Solid related to your project,
-          scheduling, estimates, and follow-ups.
-        </p>
+          widget, or by texting our published number, you consent to receive
+          text messages from Rock Solid related to your project, scheduling,
+          estimates, and follow-ups.
+        </LegalParagraph>
         <LegalList>
           <li>
             <strong>Message frequency</strong> varies based on your
-            conversation with us; we do not send recurring marketing
-            blasts.
+            conversation with us; we do not send recurring marketing blasts.
           </li>
           <li>
-            <strong>Message and data rates</strong> may apply, depending
-            on your mobile carrier and plan.
+            <strong>Message and data rates</strong> may apply, depending on
+            your mobile carrier and plan.
           </li>
           <li>
             Reply <strong>STOP</strong> at any time to opt out of automated
@@ -87,10 +88,10 @@ export default function TermsPage() {
           </li>
           <li>
             Reply <strong>HELP</strong> for support, or email{" "}
-            <LegalLink href="mailto:contact@azrocksolid.com">
+            <a href="mailto:contact@azrocksolid.com" className={legalLinkClassName}>
               contact@azrocksolid.com
-            </LegalLink>
-            .
+            </a>
+            {"."}
           </li>
           <li>
             Mobile carriers are not liable for delayed or undelivered
@@ -101,76 +102,80 @@ export default function TermsPage() {
             third parties or affiliates for marketing purposes.
           </li>
         </LegalList>
-        <p>
-          Full details about how we handle phone-number and consent data
-          are in our <LegalLink href="/privacy">Privacy Policy</LegalLink>.
-        </p>
+        <LegalParagraph>
+          Full details about how we handle phone-number and consent data are
+          in our{" "}
+          <Link href="/privacy" className={legalLinkClassName}>
+            Privacy Policy
+          </Link>
+          {"."}
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Photos and uploads">
-        <p>
+        <LegalParagraph>
           When you upload photos or video through the estimate form, you
-          grant us a limited license to use those files for the sole
-          purpose of preparing your estimate and performing the work, if
-          you hire us. We will not publish your photos without your
-          separate written permission.
-        </p>
+          grant us a limited license to use those files for the sole purpose
+          of preparing your estimate and performing the work, if you hire
+          us. We will not publish your photos without your separate written
+          permission.
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Disclaimers">
-        <p>
+        <LegalParagraph>
           The Site and any preliminary estimates are provided &ldquo;as
-          is&rdquo; without warranties of any kind. We do not guarantee
-          that the Site will be available without interruption or free of
-          errors. Once a written project agreement is signed, the
-          warranties in that agreement govern the work performed.
-        </p>
+          is&rdquo; without warranties of any kind. We do not guarantee that
+          the Site will be available without interruption or free of errors.
+          Once a written project agreement is signed, the warranties in that
+          agreement govern the work performed.
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Limitation of liability">
-        <p>
-          To the fullest extent permitted by law, Rock Solid&apos;s
-          aggregate liability arising from your use of the Site or any
-          pre-contract communications is limited to one hundred US dollars
-          (USD 100). Liability for the construction work itself is
-          governed by the signed project agreement and applicable Arizona
-          law.
-        </p>
+        <LegalParagraph>
+          To the fullest extent permitted by law, Rock Solid&apos;s aggregate
+          liability arising from your use of the Site or any pre-contract
+          communications is limited to one hundred US dollars (USD 100).
+          Liability for the construction work itself is governed by the
+          signed project agreement and applicable Arizona law.
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Governing law">
-        <p>
+        <LegalParagraph>
           These Terms are governed by the laws of the State of Arizona,
-          without regard to conflict-of-laws rules. Any dispute that is
-          not resolved informally shall be brought in the state or federal
-          courts located in Pima County, Arizona.
-        </p>
+          without regard to conflict-of-laws rules. Any dispute that is not
+          resolved informally shall be brought in the state or federal courts
+          located in Pima County, Arizona.
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Changes to these terms">
-        <p>
-          We may update these Terms from time to time. The effective date
-          at the top of this page reflects the most recent update.
-          Continued use of the Site after a change means you accept the
-          updated Terms.
-        </p>
+        <LegalParagraph>
+          We may update these Terms from time to time. The effective date at
+          the top of this page reflects the most recent update. Continued use
+          of the Site after a change means you accept the updated Terms.
+        </LegalParagraph>
       </LegalSection>
 
       <LegalSection title="Contact">
-        <p>
+        <LegalParagraph>
           Rock Solid Contractors
           <br />
           3808 E 32nd St
           <br />
           Tucson, AZ 85713
           <br />
-          <LegalLink href="mailto:contact@azrocksolid.com">
+          <a href="mailto:contact@azrocksolid.com" className={legalLinkClassName}>
             contact@azrocksolid.com
-          </LegalLink>
+          </a>
           <br />
-          <LegalLink href="tel:+15209108898">(520) 910-8898</LegalLink>
-        </p>
+          <a href="tel:+15209108898" className={legalLinkClassName}>
+            (520) 910-8898
+          </a>
+        </LegalParagraph>
       </LegalSection>
-    </LegalLayout>
+    </LegalPage>
   );
 }
