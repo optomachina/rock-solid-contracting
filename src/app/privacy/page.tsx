@@ -209,8 +209,8 @@ export default function PrivacyPage() {
             contact@azrocksolid.com
           </a>
           <br />
-          <a href="tel:+15209108898" className={legalLinkClassName}>
-            (520) 910-8898
+          <a href="tel:+15205579161" className={legalLinkClassName}>
+            (520) 557-9161
           </a>
         </LegalParagraph>
       </LegalSection>
